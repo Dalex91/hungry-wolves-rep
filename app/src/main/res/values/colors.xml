@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange_background">#FF460A</color>
-
+    <color name="background_color">#F2F2F2</color>
+    <color name="search_bar_color">#EFEEEE</color>
+    <color name="text_search_bar_black">#000000</color>
 </resources>
 

@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="start_pic_margin_120">120dp</dimen>
-    <dimen name="top_pic_margin_78">78dp</dimen>
-    <dimen name="start_margin_text_30">30dp</dimen>
-    <dimen name="top_margin_text_100">100dp</dimen>
-    <dimen name="text_size_60">60dp</dimen>
+    <dimen name="margin_120dp">120dp</dimen>
+    <dimen name="margin_78dp">78dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_100dp">100dp</dimen>
+    <dimen name="text_size_60dp">60dp</dimen>
+    <dimen name="text_size_34dp">34dp</dimen>
+    <dimen name="height_100dp">100dp</dimen>
+    <dimen name="width_100dp">200dp</dimen>
+    <dimen name="marring_60dp">60dp</dimen>
+    <dimen name="padding_46dp">46dp</dimen>
+    <dimen name="margin_56dp">56dp</dimen>
+    <dimen name="width_250dp">250dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="height_50dp">50dp</dimen>
 </resources>

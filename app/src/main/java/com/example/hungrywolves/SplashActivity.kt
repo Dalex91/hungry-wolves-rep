@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 
+const val TIME_FOR_LOADING : Long = 3000
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
