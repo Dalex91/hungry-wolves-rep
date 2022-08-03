@@ -14,4 +14,5 @@
     <dimen name="width_250dp">250dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="height_50dp">50dp</dimen>
+    <dimen name="height_10dp">10dp</dimen>
 </resources>
