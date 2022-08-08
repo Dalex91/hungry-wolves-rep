@@ -4,6 +4,4 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="delicious_food_for_you">Delicious\nfood for you</string>
     <string name="search">Search</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

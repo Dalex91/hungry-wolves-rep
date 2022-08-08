@@ -10,7 +10,7 @@
     <dimen name="width_100dp">200dp</dimen>
     <dimen name="marring_60dp">60dp</dimen>
     <dimen name="padding_46dp">46dp</dimen>
-    <dimen name="margin_56dp">56dp</dimen>
+    <dimen name="margin_26dp">26dp</dimen>
     <dimen name="width_250dp">250dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="height_50dp">50dp</dimen>
