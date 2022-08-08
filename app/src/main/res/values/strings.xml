@@ -3,5 +3,5 @@
     <string name="splash_app_name">Hungry\nWolves</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="delicious_food_for_you">Delicious\nfood for you</string>
-    <string name="search">Search</string>
+    <string name="search">search</string>
 </resources>
