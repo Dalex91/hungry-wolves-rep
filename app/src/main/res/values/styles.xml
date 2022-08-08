@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CategoryText" parent="TextAppearance.AppCompat">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:fontFamily">@font/sf_pro_rounded_regular</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
