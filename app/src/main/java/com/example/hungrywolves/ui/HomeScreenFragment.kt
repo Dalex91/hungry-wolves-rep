@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.hungrywolves.R
 import com.example.hungrywolves.adapters.CategoryAdapter
@@ -37,12 +38,11 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
             horizontalRecycleViewMeals.adapter = mealAdapter
         }
         viewModelHomeScreen.apply {
-            categories.observe(viewLifecycleOwner){
-                adapterCategory.submitList(it)
-            }
-            meals.observe(viewLifecycleOwner) {
-                mealAdapter.submitList(it)
-            }
+            categories.observe(viewLifecycleOwner, adapterCategory::submitList)
+            meals.observe(viewLifecycleOwner, mealAdapter::submitList)
+        }
+        binding.searchButton.setOnClickListener {
+            goToSearchScreen()
         }
         return binding.root
     }
@@ -55,5 +55,9 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
                 R.drawable.horizontal_space_recycle_view)?.let { itemDecoration.setDrawable(it) }
         }
         binding.horizontalRecycleViewMeals.addItemDecoration(itemDecoration)
+    }
+
+    private fun goToSearchScreen() {
+        findNavController().navigate(R.id.action_home_screen_fragment_to_search_screen_fragment)
     }
 }
