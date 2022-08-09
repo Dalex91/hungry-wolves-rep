@@ -24,7 +24,7 @@ class MealAdapter : ListAdapter<Meal, MealAdapter.MealViewHolder>(DiffCallback){
             oldItem.idMeal == newItem.idMeal
 
         override fun areContentsTheSame(oldItem: Meal, newItem: Meal) =
-            oldItem.mealUrl == newItem.mealUrl
+            oldItem == newItem
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

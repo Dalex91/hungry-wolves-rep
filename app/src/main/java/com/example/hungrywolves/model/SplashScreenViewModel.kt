@@ -1,20 +1,33 @@
 package com.example.hungrywolves.model
 
-import android.app.Activity
-import android.content.Intent
-import android.os.Handler
-import androidx.lifecycle.ViewModel
 
-class SplashScreenViewModel : ViewModel() {
+import android.app.Application
+
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+
+class SplashModel
+
+class SplashScreenViewModel(application: Application) : AndroidViewModel(application) {
+
+    var liveData: MutableLiveData<SplashModel> = MutableLiveData()
 
     companion object {
         const val TIME_FOR_LOADING : Long = 3000
     }
 
-    fun delayIntro(intent: Intent, activity: Activity) {
-        Handler().postDelayed({
-            activity.startActivity(intent)
-            activity.finish()
-        }, TIME_FOR_LOADING)
+    fun initSplashScreen() {
+        viewModelScope.launch {
+            delay(TIME_FOR_LOADING)
+            updateLiveData()
+        }
+    }
+
+    private fun updateLiveData() {
+        val splashModel = SplashModel()
+        liveData.value = splashModel
     }
 }

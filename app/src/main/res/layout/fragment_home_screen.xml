@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.hungrywolves.model.HomeScreenViewModel" />
@@ -20,8 +21,8 @@
             android:id="@+id/delicious_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_26dp"
             android:layout_marginStart="@dimen/margin_26dp"
+            android:layout_marginTop="@dimen/margin_26dp"
             android:fontFamily="@font/sf_pro_rounded_bold"
             android:text="@string/delicious_food_for_you"
             android:textColor="@color/black"
@@ -30,11 +31,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:layout_marginTop="@dimen/margin_20dp"
+            android:textAllCaps="false"
             android:id="@+id/search_button"
-            android:layout_width="@dimen/width_250dp"
-            android:layout_height="@dimen/height_50dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
             android:layout_marginStart="@dimen/margin_26dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="50dp"
             android:background="@drawable/rounded_button"
             android:fontFamily="@font/sf_pro_rounded_regular"
             android:gravity="left|center_vertical"
@@ -51,9 +54,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/margin_26dp"
-            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_marginTop="28dp"
+            android:clipToPadding="false"
+            android:elevation="0dp"
             android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_26dp"
+            android:paddingEnd="@dimen/margin_26dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_button"
@@ -64,9 +70,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/margin_24dp"
             android:layout_marginTop="@dimen/margin_10dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:elevation="0dp"
             android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_26dp"
+            android:paddingEnd="@dimen/margin_26dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

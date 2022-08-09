@@ -30,7 +30,7 @@ class CategoryAdapter(val actionOnButton: (Category) -> Unit)
             oldItem.idCategory == newItem.idCategory
 
         override fun areContentsTheSame(oldItem: Category, newItem: Category) =
-            oldItem.categoryUrl == newItem.categoryUrl
+            oldItem == newItem
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
@@ -45,7 +45,6 @@ class CategoryAdapter(val actionOnButton: (Category) -> Unit)
         val category = getItem(position)
         val context = holder.itemButton.context
         holder.itemButton.setOnClickListener{
-            notifyDataSetChanged()
             actionOnButton(category)
         }
         holder.itemButton.setTextColor(context.getColor(if (category.selected)
