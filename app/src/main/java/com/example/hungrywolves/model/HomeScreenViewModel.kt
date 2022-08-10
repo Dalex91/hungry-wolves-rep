@@ -36,13 +36,13 @@ class HomeScreenViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _categories.value = CategoryApi.retrofitService.getCategories().categories
+                    .mapIndexed { index, category ->
+                    category.copy(selected = (index == 0))
+                }
             }catch (e : Exception) {
                 Log.d("mes", "${e.message}")
             }
-            _categories.value = categories.value?.mapIndexed { index, category ->
-                    category.copy(selected = (index == 0))
-            }
-            _categories.value?.get(0)?.let {
+            _categories.value?.firstOrNull()?.let {
                 getMeals(it.name)
             }
         }

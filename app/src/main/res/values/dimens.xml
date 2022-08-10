@@ -27,4 +27,8 @@
     <dimen name="card_width_180dp">180dp</dimen>
     <dimen name="card_height_220dp">220dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_28dp">28dp</dimen>
+    <dimen name="size_2dp">2dp</dimen>
+    <dimen name="size_140dp">140dp</dimen>
 </resources>
