@@ -11,6 +11,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -36,11 +37,9 @@
             android:layout_width="@dimen/card_width_180dp"
             android:layout_height="@dimen/card_height_220dp"
 
-            android:layout_marginBottom="@dimen/margin_40dp"
             android:backgroundTint="@color/white"
             android:translationZ="-1dp"
-            app:cardCornerRadius="@dimen/radius_32dp"
-            app:cardElevation="@dimen/elevation_10dp"
+            app:cardCornerRadius="@dimen/radius_38dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

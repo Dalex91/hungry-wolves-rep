@@ -1,6 +1,8 @@
 package com.example.hungrywolves
 
+import android.util.Log
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import coil.load
@@ -12,3 +14,4 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
         imgView.load(imgUri)
     }
 }
+

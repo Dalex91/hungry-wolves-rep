@@ -23,7 +23,7 @@
     <dimen name="elevation_10dp">10dp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
     <dimen name="radius_26dp">26dp</dimen>
-    <dimen name="radius_32dp">32dp</dimen>
+    <dimen name="radius_38dp">38dp</dimen>
     <dimen name="card_width_180dp">180dp</dimen>
     <dimen name="card_height_220dp">220dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>

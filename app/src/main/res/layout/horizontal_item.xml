@@ -40,7 +40,7 @@
             android:layout_marginBottom="@dimen/margin_40dp"
             android:backgroundTint="@color/white"
             android:translationZ="-1dp"
-            app:cardCornerRadius="@dimen/radius_32dp"
+            app:cardCornerRadius="@dimen/radius_38dp"
             app:cardElevation="@dimen/elevation_10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
