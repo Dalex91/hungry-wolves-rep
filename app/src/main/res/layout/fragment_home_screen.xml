@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.hungrywolves.model.HomeScreenViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/concrete"
+        tools:context=".HomeScreenFragment">
+
+
+        <TextView
+            android:id="@+id/delicious_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_26dp"
+            android:layout_marginTop="@dimen/margin_26dp"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:text="@string/delicious_food_for_you"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_marginStart="@dimen/margin_26dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_50dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/sf_pro_rounded_regular"
+            android:gravity="left|center_vertical"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/gallery"
+            app:icon="@drawable/ic_search_icon"
+            app:iconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delicious_text_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizontal_recycle_view_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_28dp"
+            android:clipToPadding="false"
+            android:elevation="0dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_26dp"
+            android:paddingEnd="@dimen/margin_26dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_button"
+            tools:listitem="@layout/horizontal_category_items" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizontal_recycle_view_meals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:elevation="0dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_26dp"
+            android:paddingEnd="@dimen/margin_26dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_recycle_view_categories"
+            tools:listitem="@layout/horizontal_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

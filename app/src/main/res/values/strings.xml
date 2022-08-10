@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hungry Wolves</string>
+    <string name="splash_app_name">Hungry\nWolves</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="delicious_food_for_you">Delicious\nfood for you</string>
+    <string name="search">Search</string>
+</resources>

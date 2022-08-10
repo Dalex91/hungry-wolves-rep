@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_menu"
+        android:iconTint="#FA4A0C"
+        android:title="" />
+    <item
+        android:id="@+id/favourite_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_favourite"
+        android:title="" />
+    <item
+        android:id="@+id/profile_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile_menu"
+        android:title="" />
+</menu>
