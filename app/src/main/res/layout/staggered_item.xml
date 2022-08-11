@@ -11,11 +11,11 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:clipChildren="true"
-        android:insetBottom="0dp">
+        android:clipChildren="false">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/card_image"
@@ -38,15 +38,14 @@
             android:id="@+id/card_parent"
             android:layout_width="@dimen/card_width_180dp"
             android:layout_height="@dimen/card_height_220dp"
-            android:layout_marginTop="@dimen/margin_40dp"
-            android:layout_marginBottom="@dimen/margin_40dp"
+
             android:backgroundTint="@color/white"
             android:translationZ="-1dp"
             app:cardCornerRadius="@dimen/radius_38dp"
-            app:cardElevation="@dimen/elevation_10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_image"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,7 +56,7 @@
                     android:id="@+id/item_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="120dp"
+                    android:layout_marginTop="144dp"
                     android:fontFamily="@font/sf_pro_rounded_bold"
                     android:maxLines="2"
                     android:paddingHorizontal="@dimen/margin_16dp"

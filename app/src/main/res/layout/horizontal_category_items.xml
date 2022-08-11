@@ -7,7 +7,7 @@
 
         <variable
             name="category"
-            type="com.example.hungrywolves.network.Category" />
+            type="com.example.hungrywolves.network.data_model.Category" />
     </data>
 
     <androidx.cardview.widget.CardView
