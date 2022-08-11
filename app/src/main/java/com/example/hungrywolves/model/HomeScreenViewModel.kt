@@ -15,7 +15,7 @@ class HomeScreenViewModel : ViewModel() {
     private val _categories = MutableLiveData<List<Category>>()
     val categories : LiveData<List<Category>> = _categories
 
-    private val _meals = MutableLiveData<List<Meal>>()
+    private val _meals = MutableLiveData<List<Meal>?>()
     val meals : LiveData<List<Meal>> = _meals
 
     init {
