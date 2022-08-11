@@ -14,8 +14,8 @@ import com.example.hungrywolves.network.MealsApi
 import kotlinx.coroutines.*
 
 class SearchScreenViewModel : ViewModel() {
-    private val _meals = MutableLiveData<List<Meal>>()
-    val meals: LiveData<List<Meal>> = _meals
+    private val _meals = MutableLiveData<List<Meal>?>()
+    val meals: LiveData<List<Meal>?> = _meals
 
     private val _mealName = MutableLiveData("")
     val mealName: LiveData<String?> = _mealName
@@ -37,8 +37,9 @@ class SearchScreenViewModel : ViewModel() {
         job = viewModelScope.launch {
             delay(500)
             try {
-                mealName.value?.let {
-                    _meals.value = MealsApi.retrofitServiceByName.getMeals(it).meals
+                _mealName.value?.let {
+                    val mealResponse = MealsApi.retrofitServiceByName.getMeals(it)
+                    _meals.value = mealResponse.meals
                 } ?: run {
                     _meals.value = MealsApi.retrofitServiceByName.getMeals("").meals
                 }

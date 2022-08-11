@@ -33,7 +33,7 @@ interface MealApiByCategoryService {
 
 interface MealApiByNameService {
     @GET("search.php")
-    suspend fun getMeals(@Query("s") category: String) : DataMealsSource
+    suspend fun getMeals(@Query("s") name: String) : DataMealsSource
 }
 
 object MealsApi {
