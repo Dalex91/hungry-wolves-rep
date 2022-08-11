@@ -9,11 +9,9 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class SplashModel
-
 class SplashScreenViewModel(application: Application) : AndroidViewModel(application) {
 
-    var liveData: MutableLiveData<SplashModel> = MutableLiveData()
+    var liveData: MutableLiveData<Boolean> = MutableLiveData(false)
 
     companion object {
         const val TIME_FOR_LOADING : Long = 3000
@@ -27,7 +25,7 @@ class SplashScreenViewModel(application: Application) : AndroidViewModel(applica
     }
 
     private fun updateLiveData() {
-        val splashModel = SplashModel()
+        val splashModel = true
         liveData.value = splashModel
     }
 }

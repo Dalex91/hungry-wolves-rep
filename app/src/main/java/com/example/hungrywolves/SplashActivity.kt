@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.hungrywolves.model.SplashModel
 import com.example.hungrywolves.model.SplashScreenViewModel
 
 
@@ -32,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun observeSplashLiveData() {
         viewModelSplashScreen.initSplashScreen()
-        val observer = Observer<SplashModel> {
+        val observer = Observer<Boolean> {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()

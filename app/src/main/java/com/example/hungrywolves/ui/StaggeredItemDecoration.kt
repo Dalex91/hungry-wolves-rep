@@ -7,10 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 class StaggeredItemDecoration : RecyclerView.ItemDecoration(){
 
     companion object DecorationDim {
-        const val LEFT = 50
-        const val RIGHT = 50
-        const val TOP = 50
-        const val BOTTOM = 50
+        const val MARGINS = 60
         const val TOP_FIRST = 250
     }
 
@@ -21,10 +18,10 @@ class StaggeredItemDecoration : RecyclerView.ItemDecoration(){
         state: RecyclerView.State
     ) {
         with(outRect) {
-            left = LEFT
-            right = RIGHT
-            top = TOP
-            bottom = BOTTOM
+            left = MARGINS
+            right = MARGINS
+            top = MARGINS
+            bottom = MARGINS
             if(parent.getChildAdapterPosition(view) == 1)
                 top = TOP_FIRST
         }

@@ -7,7 +7,7 @@
 
         <variable
             name="category"
-            type="com.example.hungrywolves.network.Category" />
+            type="com.example.hungrywolves.network.data_model.Category" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -41,7 +41,7 @@
             <View
                 android:id="@+id/item_bar"
                 android:layout_width="0dp"
-                android:layout_height="2dp"
+                android:layout_height="@dimen/size_2dp"
                 android:background="@color/vermilion"
                 app:layout_constraintEnd_toEndOf="@id/button_category"
                 app:layout_constraintStart_toStartOf="parent"

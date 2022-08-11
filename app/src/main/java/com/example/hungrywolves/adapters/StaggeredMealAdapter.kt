@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrywolves.databinding.StaggeredItemBinding
-import com.example.hungrywolves.network.Meal
+import com.example.hungrywolves.network.data_model.Meal
 
 class StaggeredMealAdapter : ListAdapter<Meal, StaggeredMealAdapter.StaggeredMealViewHolder>(MealAdapter.DiffCallback){
 

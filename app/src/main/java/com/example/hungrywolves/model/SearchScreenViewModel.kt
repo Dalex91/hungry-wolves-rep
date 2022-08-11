@@ -2,14 +2,13 @@ package com.example.hungrywolves.model
 
 import android.text.Editable
 import android.util.Log
-import android.view.TextureView
 import android.view.View
 import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.hungrywolves.network.Meal
+import com.example.hungrywolves.network.data_model.Meal
 import com.example.hungrywolves.network.MealsApi
 import kotlinx.coroutines.*
 

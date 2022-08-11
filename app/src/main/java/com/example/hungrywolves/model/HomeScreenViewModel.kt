@@ -7,6 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.hungrywolves.network.*
+import com.example.hungrywolves.network.data_model.Category
+import com.example.hungrywolves.network.data_model.Meal
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
@@ -16,7 +18,7 @@ class HomeScreenViewModel : ViewModel() {
     val categories : LiveData<List<Category>> = _categories
 
     private val _meals = MutableLiveData<List<Meal>?>()
-    val meals : LiveData<List<Meal>> = _meals
+    val meals : MutableLiveData<List<Meal>?> = _meals
 
     init {
         getCategories()
@@ -36,13 +38,13 @@ class HomeScreenViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _categories.value = CategoryApi.retrofitService.getCategories().categories
+                    .mapIndexed { index, category ->
+                    category.copy(selected = (index == 0))
+                }
             }catch (e : Exception) {
                 Log.d("mes", "${e.message}")
             }
-            _categories.value = categories.value?.mapIndexed { index, category ->
-                    category.copy(selected = (index == 0))
-            }
-            _categories.value?.get(0)?.let {
+            _categories.value?.firstOrNull()?.let {
                 getMeals(it.name)
             }
         }
