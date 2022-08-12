@@ -10,7 +10,7 @@ import com.example.hungrywolves.model.SplashScreenViewModel
 
 
 class SplashActivity : AppCompatActivity() {
-    lateinit var viewModelSplashScreen : SplashScreenViewModel
+    lateinit var viewModelSplashScreen: SplashScreenViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        
+
         supportActionBar?.hide()
         initViewModel()
         observeSplashLiveData()

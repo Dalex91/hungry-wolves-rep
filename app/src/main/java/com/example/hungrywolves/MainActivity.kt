@@ -2,8 +2,11 @@ package com.example.hungrywolves
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,5 +16,20 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
+        setupNav()
+    }
+
+    fun setupNav() {
+        val navHostFragment = supportFragmentManager.findFragmentById(
+            R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        navController.addOnDestinationChangedListener{_, destination, _ ->
+            if(destination.id == R.id.search_screen_fragment)
+               hideBottomBar()
+        }
+    }
+
+    fun hideBottomBar(){
+        findViewById<View>(R.id.menu_navigation)?.visibility = View.INVISIBLE
     }
 }

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.SearchScreenFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.hungrywolves.model.SearchScreenViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gallery">
+
+        <LinearLayout
+            android:id="@+id/layout_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_26dp"
+            android:layout_marginTop="@dimen/margin_26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/image_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_back_icon" />
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:afterTextChanged="@{viewModel.updateMealName}"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/sf_pro_rounded_regular"
+                android:hint="@string/what_would_you_like_to_eat_today"
+                android:inputType="textVisiblePassword|textNoSuggestions"
+                android:maxLines="1"
+                android:text="@{viewModel.mealName}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_130dp"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:text="@{@string/results(viewModel.numberOfResults)}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_26sp"
+            android:translationZ="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textVisibility="@{viewModel.textVisibility}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/staggered_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_26dp"
+            android:background="@drawable/recycle_view_rounded_corners"
+            android:clipChildren="false"
+            android:paddingTop="@dimen/margin_90dp"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_search_bar"
+            app:spanCount="2"
+            tools:listitem="@layout/staggered_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,4 +1,4 @@
-package com.example.hungrywolves.network
+package com.example.hungrywolves.network.data_model
 
 import com.squareup.moshi.Json
 

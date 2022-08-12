@@ -1,10 +1,11 @@
 package com.example.hungrywolves
 
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
+import androidx.transition.Visibility
 import coil.load
-import com.example.hungrywolves.network.Category
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
@@ -13,3 +14,12 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
         imgView.load(imgUri)
     }
 }
+
+@BindingAdapter("textVisibility")
+fun bindTextView(textView: TextView, visibility: Boolean) {
+    if(visibility)
+        textView.visibility = TextView.VISIBLE
+    else
+        textView.visibility = TextView.INVISIBLE
+}
+
