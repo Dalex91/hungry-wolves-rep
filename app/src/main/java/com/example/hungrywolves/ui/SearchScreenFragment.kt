@@ -33,7 +33,7 @@ class SearchScreenFragment : Fragment() {
             staggeredRecycleView.addItemDecoration(StaggeredItemDecoration())
             imageBackButton.setOnClickListener {
                 viewModelSearchScreen.cleanText()
-                fragmentManager?.popBackStack()
+                findNavController().navigateUp()
             }
         }
         viewModelSearchScreen.apply {
