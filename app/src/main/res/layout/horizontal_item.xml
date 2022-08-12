@@ -57,7 +57,7 @@
                     android:id="@+id/item_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="120dp"
+                    android:layout_marginTop="@dimen/margin_120dp"
                     android:fontFamily="@font/sf_pro_rounded_bold"
                     android:maxLines="2"
                     android:paddingHorizontal="@dimen/margin_16dp"

@@ -32,4 +32,8 @@
     <dimen name="size_2dp">2dp</dimen>
     <dimen name="size_140dp">140dp</dimen>
     <dimen name="radius_36dp">36dp</dimen>
+    <dimen name="margin_144dp">144dp</dimen>
+    <dimen name="margin_90dp">90dp</dimen>
+    <dimen name="margin_130dp">130dp</dimen>
+    <dimen name="text_size_26sp">26sp</dimen>
 </resources>

@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/favourite_icon_selector.xml" value="0.138" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rouded_corners.xml" value="0.1" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rounded_corners.xml" value="0.138" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_detail_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_home_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_search_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_category_items.xml" value="0.13722826086956522" />
@@ -13,4 +16,5 @@
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
