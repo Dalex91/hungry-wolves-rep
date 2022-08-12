@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrywolves.databinding.HorizontalItemBinding
 import com.example.hungrywolves.network.data_model.Meal
 
-class MealAdapter : ListAdapter<Meal, MealAdapter.MealViewHolder>(DiffCallback){
+class MealAdapter(val actionPerform : () -> Unit) : ListAdapter<Meal, MealAdapter.MealViewHolder>(DiffCallback){
 
     class MealViewHolder(
         private var binding : HorizontalItemBinding
@@ -36,5 +36,8 @@ class MealAdapter : ListAdapter<Meal, MealAdapter.MealViewHolder>(DiffCallback){
 
     override fun onBindViewHolder(holder: MealViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener {
+            actionPerform()
+        }
     }
 }

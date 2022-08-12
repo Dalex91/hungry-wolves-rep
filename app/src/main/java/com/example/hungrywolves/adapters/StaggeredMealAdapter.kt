@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrywolves.databinding.StaggeredItemBinding
 import com.example.hungrywolves.network.data_model.Meal
 
-class StaggeredMealAdapter : ListAdapter<Meal, StaggeredMealAdapter.StaggeredMealViewHolder>(MealAdapter.DiffCallback){
+class StaggeredMealAdapter(val actionPerform: () -> (Unit)) : ListAdapter<Meal, StaggeredMealAdapter.StaggeredMealViewHolder>(MealAdapter.DiffCallback){
 
     class StaggeredMealViewHolder(
         private var binding : StaggeredItemBinding
@@ -27,6 +27,9 @@ class StaggeredMealAdapter : ListAdapter<Meal, StaggeredMealAdapter.StaggeredMea
 
     override fun onBindViewHolder(holder: StaggeredMealViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener{
+            actionPerform()
+        }
     }
 
 }

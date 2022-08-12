@@ -24,36 +24,21 @@ private val retrofitByName = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
-private val retrofitById = Retrofit.Builder()
-    .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
-    .build()
-
-interface MealApiByCategoryService {
+interface MealApiService {
     @GET("filter.php")
-    suspend fun getMeals(@Query("c") category: String) : DataMealsSource
-}
+    suspend fun getMealsByCategory(@Query("c") category: String) : DataMealsSource
 
-interface MealApiByNameService {
     @GET("search.php")
-    suspend fun getMeals(@Query("s") name: String) : DataMealsSource
+    suspend fun getMealsByName(@Query("s") name: String) : DataMealsSource
 }
 
-interface MealApiByIdService {
-    @GET("lookup.php")
-    suspend fun getMeals(@Query("i") name: String) : DataMealsSource
-}
 
 object MealsApi {
-    val retrofitServiceByCategory : MealApiByCategoryService by lazy {
-        retrofitByCategory.create(MealApiByCategoryService::class.java)
+    val retrofitServiceByCategory : MealApiService by lazy {
+        retrofitByCategory.create(MealApiService::class.java)
     }
 
-    val retrofitServiceByName : MealApiByNameService by lazy {
-        retrofitByName.create(MealApiByNameService::class.java)
-    }
-
-    val retrofitServiceById : MealApiByIdService by lazy {
-        retrofitByName.create(MealApiByIdService::class.java)
+    val retrofitServiceByName : MealApiService by lazy {
+        retrofitByName.create(MealApiService::class.java)
     }
 }

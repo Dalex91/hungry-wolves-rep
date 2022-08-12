@@ -27,7 +27,7 @@ class HomeScreenViewModel : ViewModel() {
     private fun getMeals(category : String) {
         viewModelScope.launch {
             try {
-                _meals.value = MealsApi.retrofitServiceByCategory.getMeals(category).meals
+                _meals.value = MealsApi.retrofitServiceByCategory.getMealsByCategory(category).meals
             }catch (e : Exception) {
                 Log.d("mes", "${e.message}")
             }

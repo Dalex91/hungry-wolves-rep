@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/favourite_icon_selector.xml" value="0.138" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rouded_corners.xml" value="0.1" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rounded_corners.xml" value="0.138" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_detail_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_home_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_search_screen.xml" value="0.25416666666666665" />

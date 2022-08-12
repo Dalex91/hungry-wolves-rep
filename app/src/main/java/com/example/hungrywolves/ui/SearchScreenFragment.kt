@@ -17,7 +17,7 @@ class SearchScreenFragment : Fragment() {
     private val viewModelSearchScreen : SearchScreenViewModel by viewModels()
     private lateinit var binding : FragmentSearchScreenBinding
     private val mealAdapter : StaggeredMealAdapter by lazy {
-        StaggeredMealAdapter()
+        StaggeredMealAdapter(this::goToDetailScreen)
     }
 
     override fun onCreateView(
@@ -33,7 +33,7 @@ class SearchScreenFragment : Fragment() {
             staggeredRecycleView.addItemDecoration(StaggeredItemDecoration())
             imageBackButton.setOnClickListener {
                 viewModelSearchScreen.cleanText()
-                this@SearchScreenFragment.hideKeyboard()
+                findNavController().navigateUp()
             }
         }
         viewModelSearchScreen.apply {
@@ -42,11 +42,10 @@ class SearchScreenFragment : Fragment() {
                 getSearchedMeals()
             }
         }
-        activity?.findViewById<View>(R.id.menu_navigation)?.visibility = View.INVISIBLE
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        this@SearchScreenFragment.openKeyboard(binding.searchBar)
+    private fun goToDetailScreen() {
+        findNavController().navigate(R.id.action_search_screen_fragment_to_detail_screen_fragment)
     }
 }
