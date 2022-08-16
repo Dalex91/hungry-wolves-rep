@@ -6,6 +6,7 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,15 +19,18 @@ class MainActivity : AppCompatActivity() {
         setupNav()
     }
 
-    fun setupNav() {
-        val navController = findNavController(androidx.navigation.fragment.R.id.nav_host_fragment_container)
+    private fun setupNav() {
+        val navHostFragment = supportFragmentManager.findFragmentById(
+            R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
         navController.addOnDestinationChangedListener{_, destination, _ ->
-            if(destination.id == R.id.search_screen_fragment)
-               hideBottomBar()
+            if(destination.id != R.id.home_screen_fragment) {
+                hideBottomBar()
+            }
         }
     }
 
-    fun hideBottomBar(){
+    private fun hideBottomBar(){
         findViewById<View>(R.id.menu_navigation)?.visibility = View.INVISIBLE
     }
 }

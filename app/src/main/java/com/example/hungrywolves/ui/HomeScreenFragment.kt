@@ -61,7 +61,8 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
         findNavController().navigate(R.id.action_home_screen_fragment_to_search_screen_fragment)
     }
 
-    private fun goToDetailScreen() {
-        findNavController().navigate(R.id.action_home_screen_fragment_to_detail_screen_fragment)
+    private fun goToDetailScreen(id : String) {
+        val action = HomeScreenFragmentDirections.actionHomeScreenFragmentToDetailScreenFragment(id)
+        findNavController().navigate(action)
     }
 }

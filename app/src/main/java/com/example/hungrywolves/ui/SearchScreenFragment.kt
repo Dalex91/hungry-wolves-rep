@@ -45,7 +45,8 @@ class SearchScreenFragment : Fragment() {
         return binding.root
     }
 
-    private fun goToDetailScreen() {
-        findNavController().navigate(R.id.action_search_screen_fragment_to_detail_screen_fragment)
+    private fun goToDetailScreen(idMeal : String) {
+        val action = SearchScreenFragmentDirections.actionSearchScreenFragmentToDetailScreenFragment(idMeal)
+        findNavController().navigate(action)
     }
 }

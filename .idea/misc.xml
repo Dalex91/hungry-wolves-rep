@@ -3,16 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/bottom_menu_selector.xml" value="0.1005" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.1" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/color_cursor.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/custom_checkbox.xml" value="0.1545" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/favourite_icon_button_selector.xml" value="0.1545" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/favourite_icon_selector.xml" value="0.138" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/favourite_icon_tint_button_selector.xml" value="0.1545" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/home_icon_selector.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/horizontal_space_recycle_view.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_back_icon.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_favourite.xml" value="0.1625" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_favourite_pressed.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_home_menu.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_home_pressed.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_profile_menu.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_profile_pressed.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_search_icon.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/icon_border.xml" value="0.135" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/profile_icon_selector.xml" value="0.135" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rouded_corners.xml" value="0.1" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rounded_corners.xml" value="0.138" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/rounded_button.xml" value="0.1545" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/tag_item.xml" value="0.1545" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_detail_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_home_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_search_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_category_items.xml" value="0.13722826086956522" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_tag_item.xml" value="0.6" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/splash_screen.xml" value="0.13722826086956522" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/staggered_item.xml" value="0.4" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/menu/bottom_navigation_items.xml" value="0.25416666666666665" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/menu/search_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

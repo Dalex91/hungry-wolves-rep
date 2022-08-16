@@ -2,13 +2,10 @@ package com.example.hungrywolves.model
 
 import android.text.Editable
 import android.util.Log
-import android.view.View
-import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.transition.Visibility
 import com.example.hungrywolves.network.data_model.Meal
 import com.example.hungrywolves.network.MealsApi
 import kotlinx.coroutines.*
@@ -25,7 +22,7 @@ class SearchScreenViewModel : ViewModel() {
     private val _numberOfResults = MutableLiveData(0)
     val numberOfResults: LiveData<Int> = _numberOfResults
 
-    private val _textVisibility = MutableLiveData<Boolean>(false)
+    private val _textVisibility = MutableLiveData(false)
     val textVisibility: LiveData<Boolean> = _textVisibility
 
     private var job: Job = Job()
@@ -39,7 +36,7 @@ class SearchScreenViewModel : ViewModel() {
         job = viewModelScope.launch {
             delay(DELAY_TIME)
             try {
-                _meals.value = MealsApi.retrofitServiceByName.getMealsByName(_mealName.value ?: "")
+                _meals.value = MealsApi.retrofitServiceMeal.getMealsByName(_mealName.value ?: "")
                     .meals
                 _numberOfResults.value = _meals.value?.size ?: 0
                 setVisibility((_mealName.value != ""))

@@ -29,5 +29,9 @@
     <fragment
         android:id="@+id/detail_screen_fragment"
         android:name="com.example.hungrywolves.ui.DetailScreenFragment"
-        tools:layout="@layout/fragment_detail_screen" />
+        tools:layout="@layout/fragment_detail_screen" >
+        <argument
+            android:name="idMeal"
+            app:argType="string" />
+    </fragment>
 </navigation>
