@@ -36,13 +36,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
+            <ToggleButton
                 android:id="@+id/favourite_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/margin_30dp"
                 android:background="@drawable/ic_favourite"
                 android:checked="false"
                 android:scaleType="centerInside"
+                android:textOff=""
+                android:textOn=""
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -147,6 +149,7 @@
                         android:fontFamily="@font/sf_pro_rounded_regular"
                         android:ingredient="@{viewModel.mealDetail.firstIngredient}"
                         android:measure="@{viewModel.mealDetail.firstMeasure}"
+                        android:textColor="@color/gray"
                         android:textSize="@dimen/text_size_18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/first_check_box"
@@ -180,6 +183,7 @@
                         android:fontFamily="@font/sf_pro_rounded_regular"
                         android:ingredient="@{viewModel.mealDetail.secondIngredient}"
                         android:measure="@{viewModel.mealDetail.secondMeasure}"
+                        android:textColor="@color/gray"
                         android:textSize="@dimen/text_size_18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/second_check_box"
@@ -213,6 +217,7 @@
                         android:fontFamily="@font/sf_pro_rounded_regular"
                         android:ingredient="@{viewModel.mealDetail.thirdIngredient}"
                         android:measure="@{viewModel.mealDetail.thirdMeasure}"
+                        android:textColor="@color/gray"
                         android:textSize="@dimen/text_size_18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/third_check_box"
@@ -241,6 +246,7 @@
                     android:paddingTop="@dimen/margin_16dp"
                     android:paddingBottom="@dimen/margin_26dp"
                     android:text="@{viewModel.mealDetail.instruction}"
+                    android:textColor="@color/gray"
                     android:textSize="@dimen/text_size_18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -38,6 +38,13 @@ class DetailScreenFragment : Fragment() {
                 findNavController().navigateUp()
             }
             horizontalRecycleViewTags.adapter = tagAdapter
+            favouriteButton.apply {
+                setOnCheckedChangeListener { _, isChecked ->
+                    background = ContextCompat.getDrawable(requireContext(),
+                        if(isChecked) R.drawable.ic_favourite_pressed else
+                            R.drawable.ic_favourite)
+                }
+            }
         }
         viewModelDetailScreen.apply {
             getMealDetails(args.idMeal)
