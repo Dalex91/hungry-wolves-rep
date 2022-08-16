@@ -15,6 +15,15 @@
         <action
             android:id="@+id/action_home_screen_fragment_to_detail_screen_fragment"
             app:destination="@id/detail_screen_fragment" />
+        <action
+            android:id="@+id/action_home_screen_fragment_to_profile_screen_fragment"
+            app:destination="@id/profile_screen_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_screen_fragment"
+        android:name="com.example.hungrywolves.ui.ProfileScreenFragment"
+        tools:layout="@layout/fragment_profile_screen">
     </fragment>
 
     <fragment

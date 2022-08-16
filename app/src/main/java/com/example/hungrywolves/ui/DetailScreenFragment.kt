@@ -23,7 +23,6 @@ class DetailScreenFragment : Fragment() {
     private val tagAdapter : TagAdapter by lazy {
         TagAdapter()
     }
-    private val checked : Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,

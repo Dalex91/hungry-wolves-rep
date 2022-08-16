@@ -59,6 +59,7 @@
                     android:paddingHorizontal="@dimen/margin_16dp"
                     android:text="@{meal.name}"
                     android:textAlignment="center"
+                    android:ellipsize="end"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_18sp"
                     app:layout_constraintTop_toTopOf="parent"
