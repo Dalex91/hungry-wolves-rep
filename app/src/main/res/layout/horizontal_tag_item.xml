@@ -18,8 +18,8 @@
 
             android:id="@+id/tag_button"
             style="@style/Widget.Material3.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:backgroundTint="@android:color/transparent"
             android:fontFamily="@font/sf_pro_rounded_regular"
@@ -28,6 +28,10 @@
             android:text="@{tag}"
             android:textColor="@color/vermilion"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/vermilion"
             tools:text="Something" />
     </androidx.constraintlayout.widget.ConstraintLayout>
