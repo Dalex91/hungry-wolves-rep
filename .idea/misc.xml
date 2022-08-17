@@ -31,10 +31,12 @@
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_detail_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_home_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_profile_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_search_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_terms_and_conditions.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_category_items.xml" value="0.13722826086956522" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_tag_item.xml" value="0.6" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_tag_item.xml" value="0.8800000000000001" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/splash_screen.xml" value="0.13722826086956522" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/staggered_item.xml" value="0.4" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/menu/bottom_navigation_items.xml" value="0.25416666666666665" />

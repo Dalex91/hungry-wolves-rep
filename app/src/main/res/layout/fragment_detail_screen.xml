@@ -100,6 +100,7 @@
                     android:id="@+id/horizontal_recycle_view_tags"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:clipToPadding="false"
                     android:orientation="horizontal"
                     android:paddingHorizontal="@dimen/margin_26dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

@@ -53,13 +53,4 @@ class DetailScreenFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val itemDecoration = DividerItemDecoration(context, DividerItemDecoration.HORIZONTAL)
-        context?.let {
-            ContextCompat.getDrawable(
-                it,
-                R.drawable.horizontal_space_recycle_view)?.let { itemDecoration.setDrawable(it) }
-        }
-        binding.horizontalRecycleViewTags.addItemDecoration(itemDecoration)
-    }
 }

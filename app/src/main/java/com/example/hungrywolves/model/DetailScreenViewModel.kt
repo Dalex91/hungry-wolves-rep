@@ -1,6 +1,5 @@
 package com.example.hungrywolves.model
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,14 +19,11 @@ class DetailScreenViewModel : ViewModel(){
     fun getMealDetails(id: String) {
         viewModelScope.launch {
             try {
-                Log.d("Bla", id)
                 _mealDetail.value = MealsApi.retrofitServiceMeal.getMealById(id).meals.firstOrNull()
-                Log.d("Bla", "${_mealDetail.value?.name}")
                 extractTags()
             }
             catch (e : Exception) {
                 e.printStackTrace()
-                Log.d("ViewModel", "${e.message}")
             }
         }
     }
