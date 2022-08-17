@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.FavoritesScreenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alabaster"
+        android:paddingHorizontal="@dimen/margin_26dp">
+
+        <TextView
+            android:id="@+id/favourite_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_26dp"
+            android:layout_marginBottom="@dimen/margin_46dp"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:paddingBottom="@dimen/margin_30dp"
+            android:src="@drawable/test_pic"
+            android:text="@string/my_favourites"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/swipe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_rounded_regular"
+
+            android:text="@string/swipe_on_an_item_to_delete"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/items_recycle_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/favourite_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/items_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/favourite_text"
+            tools:listitem="@layout/vertical_favorite_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

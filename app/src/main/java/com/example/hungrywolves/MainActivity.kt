@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.home_screen_fragment -> View.VISIBLE
                     R.id.profile_screen_fragment-> View.VISIBLE
                     R.id.terms_and_condition_fragment -> View.VISIBLE
+                    R.id.favourites_screen_fragment -> View.VISIBLE
                     else -> View.GONE
                 }
             }
