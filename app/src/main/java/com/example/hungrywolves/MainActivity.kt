@@ -20,16 +20,21 @@ class MainActivity : AppCompatActivity() {
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
-        setContentView(R.layout.activity_main)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
         navController.addOnDestinationChangedListener{_, destination, _ ->
-            if(destination.id != R.id.home_screen_fragment) {
-                binding.menuNavigation.visibility = View.INVISIBLE
+            binding.menuNavigation.apply {
+                visibility = when(destination.id) {
+                    R.id.home_screen_fragment -> View.VISIBLE
+                    R.id.profile_screen_fragment-> View.VISIBLE
+                    R.id.terms_and_condition_fragment -> View.VISIBLE
+                    else -> View.GONE
+                }
             }
         }
 
