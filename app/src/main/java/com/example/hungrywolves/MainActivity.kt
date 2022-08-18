@@ -6,7 +6,6 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.hungrywolves.databinding.ActivityMainBinding
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             binding.menuNavigation.apply {
                 visibility = when(destination.id) {
-                    R.id.home_screen_fragment -> View.VISIBLE
+                    R.id.home_screen_fragment, R.id.profile_screen_fragment -> View.VISIBLE
                     else -> View.GONE
                 }
             }

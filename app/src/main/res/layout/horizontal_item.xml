@@ -60,6 +60,7 @@
                     android:layout_marginTop="@dimen/margin_120dp"
                     android:fontFamily="@font/sf_pro_rounded_bold"
                     android:maxLines="2"
+                    android:ellipsize="end"
                     android:paddingHorizontal="@dimen/margin_16dp"
                     android:text="@{meal.name}"
                     android:textAlignment="center"

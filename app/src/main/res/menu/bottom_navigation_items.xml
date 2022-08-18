@@ -6,12 +6,12 @@
         android:icon="@drawable/home_icon_selector"
         android:title="" />
     <item
-        android:id="@+id/search_screen_fragment"
+        android:id="@+id/favourites_screen_fragment"
         android:checked="true"
         android:icon="@drawable/favourite_icon_selector"
         android:title="" />
     <item
-        android:id="@+id/profile_page"
+        android:id="@+id/profile_screen_fragment"
         android:checked="true"
         android:icon="@drawable/profile_icon_selector"
         android:title="" />
