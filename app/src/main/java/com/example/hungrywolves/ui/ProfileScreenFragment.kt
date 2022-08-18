@@ -30,9 +30,6 @@ class ProfileScreenFragment : Fragment() {
             termsAndConditionPage.setOnClickListener {
                 goToTermsAndConditionScreen()
             }
-            termsAndConditionButton.setOnClickListener {
-                goToTermsAndConditionScreen()
-            }
         }
         viewModelProfileScreen.getProfileUser()
         return binding.root
