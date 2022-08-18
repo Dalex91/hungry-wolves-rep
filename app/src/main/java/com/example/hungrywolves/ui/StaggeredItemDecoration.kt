@@ -5,6 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
 const val MARGIN = 32
+const val MARGIN_TOP = 150
 class StaggeredItemDecoration : RecyclerView.ItemDecoration(){
 
     override fun getItemOffsets(
@@ -18,16 +19,16 @@ class StaggeredItemDecoration : RecyclerView.ItemDecoration(){
             if(parent.getChildAdapterPosition(view) == 0)
                 top = 0
             if(parent.getChildAdapterPosition(view) % 2 == 0) {
-                left = 32
-                right = 32
+                left = MARGIN
+                right = MARGIN
             }
             else {
                 left = 0
-                right = 32
+                right = MARGIN
             }
 
             if(parent.getChildAdapterPosition(view) == 1)
-                top = 250
+                top = MARGIN_TOP
         }
     }
 }
