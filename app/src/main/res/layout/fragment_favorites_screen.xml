@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.FavoritesScreenFragment">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.hungrywolves.model.FavouritesScreenViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,13 +42,13 @@
             android:text="@string/swipe_on_an_item_to_delete"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/items_recycle_view"
+            app:layout_constraintBottom_toTopOf="@id/favourites_reycle_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/favourite_text" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/items_recycle_view"
+            android:id="@+id/favourites_reycle_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_30dp"
