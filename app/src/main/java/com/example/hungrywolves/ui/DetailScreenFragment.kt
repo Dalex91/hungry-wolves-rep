@@ -42,6 +42,7 @@ class DetailScreenFragment : Fragment() {
                     background = ContextCompat.getDrawable(requireContext(),
                         if(isChecked) R.drawable.ic_favourite_pressed else
                             R.drawable.ic_favourite)
+                    viewModelDetailScreen.checkFav(isChecked)
                 }
             }
         }
@@ -50,15 +51,5 @@ class DetailScreenFragment : Fragment() {
             tags.observe(viewLifecycleOwner, tagAdapter::submitList)
         }
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val itemDecoration = DividerItemDecoration(context, DividerItemDecoration.HORIZONTAL)
-        context?.let {
-            ContextCompat.getDrawable(
-                it,
-                R.drawable.horizontal_space_recycle_view)?.let { itemDecoration.setDrawable(it) }
-        }
-        binding.horizontalRecycleViewTags.addItemDecoration(itemDecoration)
     }
 }

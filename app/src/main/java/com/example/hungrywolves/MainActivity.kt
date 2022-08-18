@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.hungrywolves.databinding.ActivityMainBinding
+import com.orhanobut.hawk.Hawk
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
+        
         binding.menuNavigation.setupWithNavController(navController)
     }
 
