@@ -3,6 +3,7 @@ package com.example.hungrywolves.network.data_model
 import com.squareup.moshi.Json
 
 data class MealDetail(
+    val idMeal : String,
     @Json(name = "strMeal") val name: String,
     @Json(name = "strInstructions") val instruction: String,
     @Json(name = "strTags") val tags : String?,

@@ -14,4 +14,6 @@
     <string name="terms_and_conditions">Terms and conditions</string>
     <string name="my_favourites">My favourites</string>
     <string name="swipe_on_an_item_to_delete">swipe on an item to delete</string>
+    <string name="long_press_on_item_to_delete">long press on item to delete</string>
+    <string name="delete">delete</string>
 </resources>

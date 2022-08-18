@@ -9,7 +9,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.hungrywolves.databinding.ActivityMainBinding
-import com.orhanobut.hawk.Hawk
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -31,15 +30,12 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             binding.menuNavigation.apply {
                 visibility = when(destination.id) {
-                    R.id.home_screen_fragment -> View.VISIBLE
-                    R.id.profile_screen_fragment-> View.VISIBLE
-                    R.id.terms_and_condition_fragment -> View.VISIBLE
-                    R.id.favourites_screen_fragment -> View.VISIBLE
+                    R.id.home_screen_fragment, R.id.profile_screen_fragment, R.id.favourites_screen_fragment -> View.VISIBLE
                     else -> View.GONE
                 }
             }
         }
-        
+
         binding.menuNavigation.setupWithNavController(navController)
     }
 

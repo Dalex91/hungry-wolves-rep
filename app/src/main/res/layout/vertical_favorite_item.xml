@@ -4,27 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="meal"
-            type="com.example.hungrywolves.network.data_model.Meal" />
+            type="com.example.hungrywolves.network.data_model.MealDetail" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/radius_26dp"
-        android:layout_marginVertical="@dimen/margin_16dp">
+        android:backgroundTint="@android:color/transparent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/margin_26dp"
+        android:paddingVertical="@dimen/margin_16dp">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/meal_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardCornerRadius="@dimen/radius_26dp"
             android:backgroundTint="@color/white"
-            app:cardElevation="@dimen/elevation_10dp">
+            android:minWidth="300dp"
+            app:cardCornerRadius="@dimen/radius_26dp"
+            app:cardElevation="@dimen/elevation_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/meal_image"
@@ -33,26 +43,42 @@
                     android:elevation="@dimen/elevation_10dp"
                     android:padding="@dimen/margin_16dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_pic"
+                    app:imageUrl="@{meal.mealUrl}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintHeight_min="@dimen/size_110dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_max="120dp"
                     app:layout_constraintWidth_min="@dimen/size_110dp"
                     app:shapeAppearanceOverlay="@style/CustomShapeImage" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sf_pro_rounded_bold"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size_18sp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/meal_image"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Veggie tomato mix" />
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_pro_rounded_bold"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/margin_16dp"
+                        android:text="@{meal.name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Veggie tomato mix" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
