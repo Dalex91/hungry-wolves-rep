@@ -33,6 +33,7 @@ class SearchScreenFragment : Fragment() {
                 viewModelSearchScreen.cleanText()
                 findNavController().navigateUp()
             }
+            this@SearchScreenFragment.openKeyboard(searchBar)
         }
         viewModelSearchScreen.apply {
             meals.observe(viewLifecycleOwner, mealAdapter::submitList)
@@ -41,6 +42,10 @@ class SearchScreenFragment : Fragment() {
             }
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        this@SearchScreenFragment.openKeyboard(binding.searchBar)
     }
 
     private fun goToDetailScreen(idMeal : String) {

@@ -1,6 +1,5 @@
 package com.example.hungrywolves.model
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,13 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.hungrywolves.InitApp.Companion.USERNAME
 import com.example.hungrywolves.network.MealsApi
 import com.example.hungrywolves.network.data_model.MealDetail
-import com.example.hungrywolves.network.data_model.User
 import com.orhanobut.hawk.Hawk
 import kotlinx.coroutines.launch
 
 const val COMMA = ","
 
 class DetailScreenViewModel : ViewModel(){
+
     private lateinit var _idMeal : String
     private val _mealDetail = MutableLiveData<MealDetail?>()
     val mealDetail : LiveData<MealDetail?> = _mealDetail

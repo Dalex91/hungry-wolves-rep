@@ -11,6 +11,7 @@ import com.example.hungrywolves.network.MealsApi
 import kotlinx.coroutines.*
 
 const val DELAY_TIME : Long = 500
+const val BLANK_TEXT : String = ""
 
 class SearchScreenViewModel : ViewModel() {
     private val _meals = MutableLiveData<List<Meal>?>()
@@ -25,6 +26,9 @@ class SearchScreenViewModel : ViewModel() {
     private val _textVisibility = MutableLiveData(false)
     val textVisibility: LiveData<Boolean> = _textVisibility
 
+    private val _placeholderVisibility = MutableLiveData(false)
+    val placeholderVisibility : LiveData<Boolean> = _placeholderVisibility
+
     private var job: Job = Job()
 
     init {
@@ -36,14 +40,22 @@ class SearchScreenViewModel : ViewModel() {
         job = viewModelScope.launch {
             delay(DELAY_TIME)
             try {
-                _meals.value = MealsApi.retrofitServiceMeal.getMealsByName(_mealName.value ?: "")
-                    .meals
-                _numberOfResults.value = _meals.value?.size ?: 0
-                setVisibility((_mealName.value != ""))
+                _meals.value = MealsApi.retrofitServiceMeal.getMealsByName(_mealName.value ?: "").meals
+                updateNumberOfResult(_meals.value?.size ?: 0)
+                setPlaceHolderVisibility((numberOfResults.value == 0) && (_mealName.value != ""))
+                setVisibility((_mealName.value != "") && (placeholderVisibility.value == false))
             } catch (e: Exception) {
                 Log.d("mes", "${e.message}")
             }
         }
+    }
+
+    private fun setPlaceHolderVisibility(value : Boolean) {
+        _placeholderVisibility.value = value
+    }
+
+    fun updateNumberOfResult(nr : Int) {
+        _numberOfResults.value = nr
     }
 
     fun updateMealName(s: Editable) {
@@ -51,7 +63,7 @@ class SearchScreenViewModel : ViewModel() {
     }
 
     fun cleanText() {
-        _mealName.value = ""
+        _mealName.value = BLANK_TEXT
     }
 
     private fun setVisibility(visibility: Boolean) {
