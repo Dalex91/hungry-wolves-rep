@@ -12,10 +12,26 @@
         <action
             android:id="@+id/action_home_screen_fragment_to_search_screen_fragment"
             app:destination="@id/search_screen_fragment" />
+        <action
+            android:id="@+id/action_home_screen_fragment_to_detail_screen_fragment"
+            app:destination="@id/detail_screen_fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/search_screen_fragment"
         android:name="com.example.hungrywolves.ui.SearchScreenFragment"
-        tools:layout="@layout/fragment_search_screen" />
+        tools:layout="@layout/fragment_search_screen" >
+        <action
+            android:id="@+id/action_search_screen_fragment_to_detail_screen_fragment"
+            app:destination="@id/detail_screen_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_screen_fragment"
+        android:name="com.example.hungrywolves.ui.DetailScreenFragment"
+        tools:layout="@layout/fragment_detail_screen" >
+        <argument
+            android:name="idMeal"
+            app:argType="string" />
+    </fragment>
 </navigation>

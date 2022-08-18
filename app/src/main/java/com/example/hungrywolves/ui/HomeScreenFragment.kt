@@ -21,7 +21,7 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
         CategoryAdapter(viewModelHomeScreen::filterCategories)
     }
     private val mealAdapter : MealAdapter by lazy {
-        MealAdapter()
+        MealAdapter(this::goToDetailScreen)
     }
     private lateinit var binding : FragmentHomeScreenBinding
 
@@ -59,5 +59,10 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
 
     private fun goToSearchScreen() {
         findNavController().navigate(R.id.action_home_screen_fragment_to_search_screen_fragment)
+    }
+
+    private fun goToDetailScreen(id : String) {
+        val action = HomeScreenFragmentDirections.actionHomeScreenFragmentToDetailScreenFragment(id)
+        findNavController().navigate(action)
     }
 }

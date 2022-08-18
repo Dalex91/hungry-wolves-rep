@@ -36,4 +36,9 @@
     <dimen name="margin_90dp">90dp</dimen>
     <dimen name="margin_130dp">130dp</dimen>
     <dimen name="text_size_26sp">26sp</dimen>
+    <dimen name="size_80dp">80dp</dimen>
+    <dimen name="size_36dp">36dp</dimen>
+    <dimen name="size_110dp">110dp</dimen>
+    <dimen name="size_30dp">30dp</dimen>
+    <dimen name="margin_6dp">6dp</dimen>
 </resources>

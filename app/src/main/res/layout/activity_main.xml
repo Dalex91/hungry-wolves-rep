@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/concrete"
-        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemIconTint="@drawable/bottom_menu_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

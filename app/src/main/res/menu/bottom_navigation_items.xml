@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home_page"
-        android:enabled="true"
-        android:icon="@drawable/ic_home_menu"
-        android:iconTint="#FA4A0C"
+        android:id="@+id/home_screen_fragment"
+        android:checked="true"
+        android:icon="@drawable/home_icon_selector"
         android:title="" />
     <item
-        android:id="@+id/favourite_page"
-        android:enabled="true"
-        android:icon="@drawable/ic_favourite"
+        android:id="@+id/search_screen_fragment"
+        android:checked="true"
+        android:icon="@drawable/favourite_icon_selector"
         android:title="" />
     <item
         android:id="@+id/profile_page"
-        android:enabled="true"
-        android:icon="@drawable/ic_profile_menu"
+        android:checked="true"
+        android:icon="@drawable/profile_icon_selector"
         android:title="" />
 </menu>

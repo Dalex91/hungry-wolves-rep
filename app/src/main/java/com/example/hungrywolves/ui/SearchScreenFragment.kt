@@ -17,7 +17,7 @@ class SearchScreenFragment : Fragment() {
     private val viewModelSearchScreen : SearchScreenViewModel by viewModels()
     private lateinit var binding : FragmentSearchScreenBinding
     private val mealAdapter : StaggeredMealAdapter by lazy {
-        StaggeredMealAdapter()
+        StaggeredMealAdapter(this::goToDetailScreen)
     }
 
     override fun onCreateView(
@@ -45,4 +45,8 @@ class SearchScreenFragment : Fragment() {
         return binding.root
     }
 
+    private fun goToDetailScreen(idMeal : String) {
+        val action = SearchScreenFragmentDirections.actionSearchScreenFragmentToDetailScreenFragment(idMeal)
+        findNavController().navigate(action)
+    }
 }

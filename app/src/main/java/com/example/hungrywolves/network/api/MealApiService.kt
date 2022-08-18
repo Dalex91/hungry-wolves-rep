@@ -1,5 +1,6 @@
 package com.example.hungrywolves.network
 
+import com.example.hungrywolves.network.data_model.DataDetailMealSource
 import com.example.hungrywolves.network.data_model.DataMealsSource
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -14,12 +15,7 @@ private val moshi = Moshi.Builder()
 
 private const val BASE_URL = "https://www.themealdb.com/api/json/v1/1/"
 
-private val retrofitByCategory = Retrofit.Builder()
-    .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
-    .build()
-
-private val retrofitByName = Retrofit.Builder()
+private val retrofitService = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL)
     .build()
@@ -30,15 +26,14 @@ interface MealApiService {
 
     @GET("search.php")
     suspend fun getMealsByName(@Query("s") name: String) : DataMealsSource
+
+    @GET("lookup.php")
+    suspend fun getMealById(@Query("i") id : String) : DataDetailMealSource
 }
 
 
 object MealsApi {
-    val retrofitServiceByCategory : MealApiService by lazy {
-        retrofitByCategory.create(MealApiService::class.java)
-    }
-
-    val retrofitServiceByName : MealApiService by lazy {
-        retrofitByName.create(MealApiService::class.java)
+    val retrofitServiceMeal : MealApiService by lazy {
+        retrofitService.create(MealApiService::class.java)
     }
 }
