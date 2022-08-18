@@ -30,10 +30,13 @@ fun bindTextView(textView: TextView, visibility: Boolean) {
 @BindingAdapter(value = ["android:ingredient", "android:measure"])
 fun bindCustomText(textView: TextView, ingredient : String?, measure : String?) {
     textView.text = buildSpannedString {
-        append(measure ?: " ")
-        append(" ")
+        measure?.let {
+            append("$it ")
+        }
         bold {
-            append(ingredient ?: " ")
+            ingredient?.let {
+                append(it)
+            }
         }
     }
 }

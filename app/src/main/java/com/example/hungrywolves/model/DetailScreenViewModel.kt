@@ -8,6 +8,7 @@ import com.example.hungrywolves.network.MealsApi
 import com.example.hungrywolves.network.data_model.MealDetail
 import kotlinx.coroutines.launch
 
+const val COMMA = ","
 class DetailScreenViewModel : ViewModel(){
 
     private val _mealDetail = MutableLiveData<MealDetail?>()
@@ -29,6 +30,6 @@ class DetailScreenViewModel : ViewModel(){
     }
 
     private fun extractTags() {
-        _tags.value = _mealDetail.value?.tags?.split(",")
+        _tags.value = _mealDetail.value?.tags?.split(COMMA)
     }
 }
