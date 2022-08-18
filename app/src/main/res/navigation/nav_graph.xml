@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_profile_screen_fragment_to_terms_and_condition_fragment"
             app:destination="@id/terms_and_condition_fragment" />
+        <action
+            android:id="@+id/action_profile_screen_fragment_to_favourites_screen_fragment"
+            app:destination="@id/favourites_screen_fragment" />
     </fragment>
 
     <fragment
