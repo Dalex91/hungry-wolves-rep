@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alabaster">
+
+        <ImageView
+            android:id="@+id/wifi_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:iconTint="@color/gray"
+            android:minWidth="@dimen/size_140dp"
+            android:minHeight="@dimen/size_140dp"
+            android:src="@drawable/ic_wifi_off"
+            app:layout_constraintBottom_toTopOf="@id/internet_connection_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/internet_connection_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:text="@string/no_internet_connection"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/internet_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_rounded_regular"
+            android:lines="2"
+            android:padding="@dimen/margin_16dp"
+            android:text="@string/message_no_internet"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_18sp"
+            app:layout_constraintEnd_toEndOf="@id/internet_connection_text"
+            app:layout_constraintStart_toStartOf="@id/internet_connection_text"
+            app:layout_constraintTop_toBottomOf="@id/internet_connection_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/vermilion"
+            android:text="@string/try_again"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            app:cornerRadius="@dimen/radius_26dp"
+            android:paddingVertical="@dimen/margin_20dp"
+            app:layout_constraintEnd_toEndOf="@id/internet_message"
+            app:layout_constraintStart_toStartOf="@id/internet_message"
+            app:layout_constraintTop_toBottomOf="@id/internet_message" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
