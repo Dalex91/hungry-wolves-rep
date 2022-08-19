@@ -12,18 +12,35 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class ConnectionLiveData(context: Context) : LiveData<Boolean>() {
+class ConnectionLiveData(context: Context) : LiveData<Boolean>(){
 
     private lateinit var networkCallback: ConnectivityManager.NetworkCallback
     private val cm = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
     private val validNetworks: MutableSet<Network> = HashSet()
 
     override fun onActive() {
-        networkCallback = createNetworkCallback()
-        val networkRequest = NetworkRequest.Builder()
-            .addCapability(NET_CAPABILITY_INTERNET)
-            .build()
-        cm.registerNetworkCallback(networkRequest, networkCallback)
+        cm.apply {
+            val networkCapabilities = getNetworkCapabilities(activeNetwork)
+            val hasCapabilityInternet = networkCapabilities?.hasCapability(NET_CAPABILITY_INTERNET)
+            if(hasCapabilityInternet == true) {
+                CoroutineScope(Dispatchers.IO).launch {
+                    val hasInternet = activeNetwork?.let { InternetChecker.execute(it.socketFactory) }
+                    if(hasInternet == true){
+                        withContext(Dispatchers.Main){
+                            activeNetwork?.let { validNetworks.add(it) }
+                            checkValidNetworks()
+                        }
+                    }
+                }
+            }
+            else
+                checkValidNetworks()
+            networkCallback = createNetworkCallback()
+            val networkRequest = NetworkRequest.Builder()
+                .addCapability(NET_CAPABILITY_INTERNET)
+                .build()
+            registerNetworkCallback(networkRequest, networkCallback)
+        }
     }
 
     override fun onInactive() {
@@ -37,19 +54,8 @@ class ConnectionLiveData(context: Context) : LiveData<Boolean>() {
     private fun createNetworkCallback() = object : ConnectivityManager.NetworkCallback() {
 
         override fun onAvailable(network: Network) {
-            val networkCapabilities = cm.getNetworkCapabilities(network)
-            val hasCapabilityInternet = networkCapabilities?.hasCapability(NET_CAPABILITY_INTERNET)
-            if(hasCapabilityInternet == true) {
-                CoroutineScope(Dispatchers.IO).launch {
-                    val hasInternet = InternetChecker.execute(network.socketFactory)
-                    if(hasInternet){
-                        withContext(Dispatchers.Main){
-                            validNetworks.add(network)
-                            checkValidNetworks()
-                        }
-                    }
-                }
-            }
+            validNetworks.add(network)
+            checkValidNetworks()
         }
 
         override fun onLost(network: Network) {

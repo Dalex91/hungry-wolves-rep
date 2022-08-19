@@ -40,6 +40,7 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
         viewModelHomeScreen.apply {
             categories.observe(viewLifecycleOwner, adapterCategory::submitList)
             meals.observe(viewLifecycleOwner, mealAdapter::submitList)
+            getCategories()
         }
         binding.searchButton.setOnClickListener {
             goToSearchScreen()

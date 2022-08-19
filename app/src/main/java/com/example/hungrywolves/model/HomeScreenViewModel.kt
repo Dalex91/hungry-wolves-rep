@@ -20,9 +20,6 @@ class HomeScreenViewModel : ViewModel() {
     private val _meals = MutableLiveData<List<Meal>?>()
     val meals : LiveData<List<Meal>?> = _meals
 
-    init {
-        getCategories()
-    }
 
     private fun getMeals(category : String) {
         viewModelScope.launch {
@@ -34,7 +31,7 @@ class HomeScreenViewModel : ViewModel() {
         }
     }
 
-    private fun getCategories() {
+    fun getCategories() {
         viewModelScope.launch {
             try {
                 _categories.value = CategoryApi.retrofitService.getCategories().categories

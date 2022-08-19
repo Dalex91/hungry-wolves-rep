@@ -32,6 +32,9 @@ class ProfileScreenFragment : Fragment(), DelegateBottomMenuNavigation {
             termsAndConditionPage.setOnClickListener {
                 goToTermsAndConditionScreen()
             }
+            favouritePage.setOnClickListener {
+                navToFavourites()
+            }
         }
         viewModelProfileScreen.getProfileUser()
         navDelegate = activity as DelegateBottomMenuNavigation

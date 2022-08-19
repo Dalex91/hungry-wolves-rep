@@ -1,6 +1,5 @@
 package com.example.hungrywolves.network
 
-import android.util.Log
 import java.io.IOException
 import java.net.InetSocketAddress
 import javax.net.SocketFactory

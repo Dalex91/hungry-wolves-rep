@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity(), DelegateBottomMenuNavigation{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        Log.d("Activity", "I was in main activity")
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
@@ -45,9 +44,10 @@ class MainActivity : AppCompatActivity(), DelegateBottomMenuNavigation{
         binding.menuNavigation.setupWithNavController(navController)
     }
 
+
     private fun initConnection() {
         connectionLiveData = ConnectionLiveData(this)
-        connectionLiveData.observe(this) {isNetworkAvailable ->
+        connectionLiveData.observe(this) { isNetworkAvailable ->
             Log.d("Internet", "$isNetworkAvailable")
             if(isNetworkAvailable == false)
                 navController.navigate(R.id.no_internet_screen_fragment)
@@ -57,7 +57,9 @@ class MainActivity : AppCompatActivity(), DelegateBottomMenuNavigation{
     }
 
     override fun navToFavourites() {
-        navController.navigate(R.id.favourites_screen_fragment)
+        binding.menuNavigation.selectedItemId = R.id.favourites_screen_fragment
     }
+
+    override fun onSupportNavigateUp() = navController.navigateUp()
 
 }
