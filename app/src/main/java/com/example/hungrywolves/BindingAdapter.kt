@@ -1,15 +1,15 @@
 package com.example.hungrywolves
 
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.hungrywolves.network.data_model.MealDetail
+
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
@@ -40,5 +40,15 @@ fun bindCustomText(textView: TextView, ingredient : String?, measure : String?) 
         }
     }
 }
+
+@BindingAdapter("custom_visibility")
+fun bindPlaceHolderVisibility(view: View, visibility: Boolean) {
+    view.visibility = if (visibility)
+        View.VISIBLE
+    else
+        View.GONE
+}
+
+
 
 

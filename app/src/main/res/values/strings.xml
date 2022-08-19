@@ -16,4 +16,6 @@
     <string name="swipe_on_an_item_to_delete">swipe on an item to delete</string>
     <string name="long_press_on_item_to_delete">long press on item to delete</string>
     <string name="delete">delete</string>
+    <string name="item_not_found">Item not found</string>
+    <string name="try_searching_the_item_with_na_different_keyword">Try searching the item with\na different keyword</string>
 </resources>

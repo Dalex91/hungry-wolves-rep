@@ -44,4 +44,5 @@
     <dimen name="text_size22sp">22sp</dimen>
     <dimen name="size_180dp">180dp</dimen>
     <dimen name="text_size20sp">20sp</dimen>
+    <dimen name="size_300dp">300dp</dimen>
 </resources>

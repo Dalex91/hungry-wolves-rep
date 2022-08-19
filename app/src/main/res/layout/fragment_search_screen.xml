@@ -36,7 +36,7 @@
 
             <EditText
                 android:id="@+id/search_bar"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:afterTextChanged="@{viewModel.updateMealName}"
                 android:backgroundTint="@android:color/transparent"
@@ -63,7 +63,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:textVisibility="@{viewModel.textVisibility}" />
+            app:textVisibility="@{viewModel.textVisibility}"
+            tools:text="Found x results" />
+
+        <include
+            layout="@layout/placeholder_item_not_found"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:custom_visibility="@{viewModel.placeholderVisibility}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/staggered_recycle_view"
@@ -73,6 +85,7 @@
             android:background="@drawable/recycle_view_rounded_corners"
             android:clipChildren="false"
             android:paddingTop="@dimen/margin_90dp"
+            app:custom_visibility="@{!viewModel.placeholderVisibility}"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
