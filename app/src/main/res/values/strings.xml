@@ -18,4 +18,7 @@
     <string name="delete">delete</string>
     <string name="item_not_found">Item not found</string>
     <string name="try_searching_the_item_with_na_different_keyword">Try searching the item with\na different keyword</string>
+    <string name="no_internet_connection">No internet Connection</string>
+    <string name="message_no_internet">Your internet connection is currently\nnot available please check or try again.</string>
+    <string name="try_again">Try again</string>
 </resources>

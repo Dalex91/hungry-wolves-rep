@@ -63,4 +63,10 @@
             android:name="idMeal"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/no_internet_screen_fragment"
+        android:name="com.example.hungrywolves.ui.NoInternetScreenFragment"
+        tools:layout="@layout/fragment_no_internet_screen" >
+    </fragment>
 </navigation>

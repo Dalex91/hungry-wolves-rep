@@ -24,6 +24,7 @@
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_profile_pressed.xml" value="0.135" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_search_icon.xml" value="0.135" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_search_item_not_found.xml" value="0.167" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/ic_wifi_off.xml" value="0.1285" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/icon_border.xml" value="0.135" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/profile_icon_selector.xml" value="0.135" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/drawable/recycle_view_rouded_corners.xml" value="0.1" />
@@ -35,7 +36,8 @@
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_detail_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_favorites_screen.xml" value="0.264" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_home_screen.xml" value="0.25416666666666665" />
-        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_profile_screen.xml" value="0.264" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_no_internet_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_profile_screen.xml" value="0.1" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_search_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/fragment_terms_and_conditions.xml" value="0.25416666666666665" />
         <entry key="..\:/GIT REPO/hungry-wolves-project/app/src/main/res/layout/horizontal_category_items.xml" value="0.13722826086956522" />
