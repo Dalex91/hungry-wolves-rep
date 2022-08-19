@@ -49,19 +49,5 @@
             app:layout_constraintEnd_toEndOf="@id/internet_connection_text"
             app:layout_constraintStart_toStartOf="@id/internet_connection_text"
             app:layout_constraintTop_toBottomOf="@id/internet_connection_text" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/vermilion"
-            android:text="@string/try_again"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_18sp"
-            app:cornerRadius="@dimen/radius_26dp"
-            android:paddingVertical="@dimen/margin_20dp"
-            app:layout_constraintEnd_toEndOf="@id/internet_message"
-            app:layout_constraintStart_toStartOf="@id/internet_message"
-            app:layout_constraintTop_toBottomOf="@id/internet_message" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

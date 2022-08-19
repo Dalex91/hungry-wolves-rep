@@ -3,23 +3,27 @@ package com.example.hungrywolves
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.hungrywolves.databinding.SplashScreenBinding
 import com.example.hungrywolves.model.SplashScreenViewModel
 
 
 class SplashActivity : AppCompatActivity() {
-    lateinit var viewModelSplashScreen: SplashScreenViewModel
+    private lateinit var viewModelSplashScreen: SplashScreenViewModel
+    private lateinit var binding: SplashScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.splash_screen)
+        binding = SplashScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        Log.d("Activity", "I was in splash activity")
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-
         supportActionBar?.hide()
         initViewModel()
         observeSplashLiveData()

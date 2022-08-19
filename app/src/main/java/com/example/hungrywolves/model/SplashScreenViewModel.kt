@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class SplashScreenViewModel(application: Application) : AndroidViewModel(application) {
 
-    var liveData: MutableLiveData<Boolean> = MutableLiveData(false)
+    var liveData: MutableLiveData<Boolean> = MutableLiveData()
 
     companion object {
         const val TIME_FOR_LOADING : Long = 3000

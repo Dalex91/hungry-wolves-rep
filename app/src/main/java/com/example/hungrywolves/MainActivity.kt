@@ -12,7 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.hungrywolves.databinding.ActivityMainBinding
 import com.example.hungrywolves.network.ConnectionLiveData
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DelegateBottomMenuNavigation{
     private lateinit var binding : ActivityMainBinding
     private lateinit var navController: NavController
     private lateinit var connectionLiveData: ConnectionLiveData
@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
+        Log.d("Activity", "I was in main activity")
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
@@ -54,4 +55,9 @@ class MainActivity : AppCompatActivity() {
                 navController.navigateUp()
         }
     }
+
+    override fun navToFavourites() {
+        navController.navigate(R.id.favourites_screen_fragment)
+    }
+
 }
