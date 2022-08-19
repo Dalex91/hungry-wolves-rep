@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             binding.menuNavigation.apply {
                 visibility = when(destination.id) {
-                    R.id.home_screen_fragment, R.id.profile_screen_fragment -> View.VISIBLE
+                    R.id.home_screen_fragment, R.id.profile_screen_fragment, R.id.favourites_screen_fragment -> View.VISIBLE
                     else -> View.GONE
                 }
             }

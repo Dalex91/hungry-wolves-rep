@@ -33,15 +33,14 @@ class CategoryAdapter(val actionOnButton: (Category) -> Unit)
             oldItem == newItem
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        return CategoryViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        CategoryViewHolder(
             HorizontalCategoryItemsBinding.inflate(
                 LayoutInflater.from(parent.context)
             )
         )
-    }
 
-    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CategoryAdapter.CategoryViewHolder, position: Int) {
         val category = getItem(position)
         val context = holder.itemButton.context
         holder.itemButton.setOnClickListener{

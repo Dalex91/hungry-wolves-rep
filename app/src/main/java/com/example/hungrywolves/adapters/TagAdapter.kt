@@ -13,7 +13,6 @@ class TagAdapter
     class TagViewHolder(
         private var binding : HorizontalTagItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        val itemButton = binding.tagButton
 
         fun bind(tag: String) {
             binding.tag = tag
@@ -35,7 +34,5 @@ class TagAdapter
             )
         )
 
-    override fun onBindViewHolder(holder: TagAdapter.TagViewHolder, position: Int) = holder.bind(getItem(position))
-
-
+    override fun onBindViewHolder(holder: TagViewHolder, position: Int) = holder.bind(getItem(position))
 }

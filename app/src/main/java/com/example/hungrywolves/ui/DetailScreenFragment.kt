@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.hungrywolves.R
 import com.example.hungrywolves.adapters.TagAdapter
 import com.example.hungrywolves.databinding.FragmentDetailScreenBinding
@@ -38,16 +37,28 @@ class DetailScreenFragment : Fragment() {
             }
             horizontalRecycleViewTags.adapter = tagAdapter
             favouriteButton.setOnCheckedChangeListener { _, isChecked ->
-                favouriteButton.background = ContextCompat.getDrawable(requireContext(),
-                    if(isChecked) R.drawable.ic_favourite_pressed else
-                        R.drawable.ic_favourite)
+                viewModelDetailScreen.checkFav(isChecked)
+                setBackgroundFavButton(isChecked)
             }
         }
         viewModelDetailScreen.apply {
             getMealDetails(args.idMeal)
             tags.observe(viewLifecycleOwner, tagAdapter::submitList)
         }
+        initFav()
         return binding.root
     }
 
+    private fun setBackgroundFavButton(isChecked : Boolean) {
+        binding.favouriteButton.isChecked = isChecked
+        binding.favouriteButton.background = ContextCompat.getDrawable(requireContext(),
+            if(isChecked)
+                R.drawable.ic_favourite_pressed
+            else
+                R.drawable.ic_favourite)
+    }
+
+    private fun initFav() {
+        setBackgroundFavButton(viewModelDetailScreen.isAdded())
+    }
 }

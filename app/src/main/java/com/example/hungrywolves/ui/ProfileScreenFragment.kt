@@ -30,6 +30,9 @@ class ProfileScreenFragment : Fragment() {
             termsAndConditionPage.setOnClickListener {
                 goToTermsAndConditionScreen()
             }
+            favouritePage.setOnClickListener {
+                goToFavouritesScreen()
+            }
         }
         viewModelProfileScreen.getProfileUser()
         return binding.root
@@ -37,5 +40,9 @@ class ProfileScreenFragment : Fragment() {
 
     private fun goToTermsAndConditionScreen() {
         findNavController().navigate(R.id.action_profile_screen_fragment_to_terms_and_condition_fragment)
+    }
+
+    private fun goToFavouritesScreen(){
+        findNavController().navigate(R.id.action_profile_screen_fragment_to_favourites_screen_fragment)
     }
 }
