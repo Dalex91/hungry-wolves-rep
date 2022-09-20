@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.hungrywolves.model.HomeScreenViewModel" />
+            type="com.example.hungrywolves.ui.home.HomeScreenViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
