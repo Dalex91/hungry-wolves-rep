@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.hungrywolves.R
 import com.example.hungrywolves.adapters.CategoryAdapter
 import com.example.hungrywolves.adapters.MealAdapter
+import androidx.navigation.fragment.findNavController
 import com.example.hungrywolves.databinding.FragmentHomeScreenBinding
 
-class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
+class HomeScreenFragment : Fragment() {
     private val viewModelHomeScreen : HomeScreenViewModel by viewModels()
     private val adapterCategory : CategoryAdapter by lazy {
         CategoryAdapter(viewModelHomeScreen::filterCategories)

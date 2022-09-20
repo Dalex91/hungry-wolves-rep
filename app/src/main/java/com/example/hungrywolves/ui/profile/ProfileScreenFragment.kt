@@ -1,4 +1,4 @@
-package com.example.hungrywolves.ui.profile
+package com.example.hungrywolves.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.hungrywolves.shared.utils.DelegateBottomMenuNavigation
 import com.example.hungrywolves.R
 import com.example.hungrywolves.databinding.FragmentProfileScreenBinding
+import com.example.hungrywolves.ui.profile.ProfileScreenViewModel
 
 class ProfileScreenFragment : Fragment(), DelegateBottomMenuNavigation {
     private lateinit var binding : FragmentProfileScreenBinding
@@ -34,6 +35,9 @@ class ProfileScreenFragment : Fragment(), DelegateBottomMenuNavigation {
             favouritePage.setOnClickListener {
                 navToFavourites()
             }
+            favouritePage.setOnClickListener {
+                goToFavouritesScreen()
+            }
         }
         viewModelProfileScreen.getProfileUser()
         navDelegate = activity as DelegateBottomMenuNavigation
@@ -46,5 +50,9 @@ class ProfileScreenFragment : Fragment(), DelegateBottomMenuNavigation {
 
     override fun navToFavourites() {
         navDelegate.navToFavourites()
+    }
+
+    private fun goToFavouritesScreen(){
+        findNavController().navigate(R.id.action_profile_screen_fragment_to_favourites_screen_fragment)
     }
 }
