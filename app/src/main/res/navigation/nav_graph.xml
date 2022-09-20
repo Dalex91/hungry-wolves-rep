@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home_screen_fragment"
-        android:name="com.example.hungrywolves.ui.HomeScreenFragment"
+        android:name="com.example.hungrywolves.ui.home.HomeScreenFragment"
         tools:layout="@layout/fragment_home_screen">
         <action
             android:id="@+id/action_home_screen_fragment_to_search_screen_fragment"
@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/profile_screen_fragment"
-        android:name="com.example.hungrywolves.ui.ProfileScreenFragment"
+        android:name="com.example.hungrywolves.ui.profile.ProfileScreenFragment"
         tools:layout="@layout/fragment_profile_screen">
         <action
             android:id="@+id/action_profile_screen_fragment_to_terms_and_condition_fragment"
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/search_screen_fragment"
-        android:name="com.example.hungrywolves.ui.SearchScreenFragment"
+        android:name="com.example.hungrywolves.ui.search.SearchScreenFragment"
         tools:layout="@layout/fragment_search_screen" >
         <action
             android:id="@+id/action_search_screen_fragment_to_detail_screen_fragment"
@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/favourites_screen_fragment"
-        android:name="com.example.hungrywolves.ui.FavoritesScreenFragment"
+        android:name="com.example.hungrywolves.ui.favorites.FavoritesScreenFragment"
         tools:layout="@layout/fragment_favorites_screen">
         <action
             android:id="@+id/action_favourites_screen_fragment_to_detail_screen_fragment"
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/detail_screen_fragment"
-        android:name="com.example.hungrywolves.ui.DetailScreenFragment"
+        android:name="com.example.hungrywolves.ui.details.DetailScreenFragment"
         tools:layout="@layout/fragment_detail_screen" >
         <argument
             android:name="idMeal"
@@ -69,7 +69,7 @@
 
     <fragment
         android:id="@+id/no_internet_screen_fragment"
-        android:name="com.example.hungrywolves.ui.NoInternetScreenFragment"
+        android:name="com.example.hungrywolves.ui.noInternet.NoInternetScreenFragment"
         tools:layout="@layout/fragment_no_internet_screen" >
     </fragment>
 </navigation>

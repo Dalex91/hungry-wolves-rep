@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrywolves.databinding.HorizontalItemBinding
-import com.example.hungrywolves.network.data_model.Meal
+import com.example.hungrywolves.models.Meal
 
 class MealAdapter(val actionPerform : (String) -> Unit) : ListAdapter<Meal, MealAdapter.MealViewHolder>(DiffCallback){
 

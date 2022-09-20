@@ -1,6 +1,6 @@
 package com.example.hungrywolves.network
 
-import com.example.hungrywolves.network.data_model.DataCategoriesSource
+import com.example.hungrywolves.models.DataCategoriesSource
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

@@ -1,7 +1,7 @@
 package com.example.hungrywolves.network
 
-import com.example.hungrywolves.network.data_model.DataDetailMealSource
-import com.example.hungrywolves.network.data_model.DataMealsSource
+import com.example.hungrywolves.models.DataDetailMealSource
+import com.example.hungrywolves.models.DataMealsSource
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

@@ -7,7 +7,7 @@
 
         <variable
             name="meal"
-            type="com.example.hungrywolves.network.data_model.MealDetail" />
+            type="com.example.hungrywolves.models.MealDetail" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrywolves.databinding.VerticalFavoriteItemBinding
-import com.example.hungrywolves.network.data_model.MealDetail
+import com.example.hungrywolves.models.MealDetail
 
 class FavouriteAdapter(
     val actionPerform : (String) -> Unit,

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrywolves.R
 import com.example.hungrywolves.databinding.HorizontalCategoryItemsBinding
-import com.example.hungrywolves.network.data_model.Category
+import com.example.hungrywolves.models.Category
 
 class CategoryAdapter(val actionOnButton: (Category) -> Unit)
     : ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(DiffCallback){

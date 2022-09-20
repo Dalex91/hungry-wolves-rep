@@ -4,7 +4,7 @@ import co.infinum.retromock.Retromock
 import co.infinum.retromock.meta.Mock
 import co.infinum.retromock.meta.MockBehavior
 import co.infinum.retromock.meta.MockResponse
-import com.example.hungrywolves.network.data_model.User
+import com.example.hungrywolves.models.User
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

@@ -1,0 +1,50 @@
+package com.example.hungrywolves.ui.profile
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.hungrywolves.shared.utils.DelegateBottomMenuNavigation
+import com.example.hungrywolves.R
+import com.example.hungrywolves.databinding.FragmentProfileScreenBinding
+
+class ProfileScreenFragment : Fragment(), DelegateBottomMenuNavigation {
+    private lateinit var binding : FragmentProfileScreenBinding
+    private val viewModelProfileScreen : ProfileScreenViewModel by viewModels()
+    private lateinit var navDelegate: DelegateBottomMenuNavigation
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentProfileScreenBinding.inflate(inflater, container, false)
+        binding.apply {
+            lifecycleOwner = this@ProfileScreenFragment
+            viewModel = viewModelProfileScreen
+            backButton.setOnClickListener {
+                findNavController().popBackStack()
+            }
+            termsAndConditionPage.setOnClickListener {
+                goToTermsAndConditionScreen()
+            }
+            favouritePage.setOnClickListener {
+                navToFavourites()
+            }
+        }
+        viewModelProfileScreen.getProfileUser()
+        navDelegate = activity as DelegateBottomMenuNavigation
+        return binding.root
+    }
+
+    private fun goToTermsAndConditionScreen() {
+        findNavController().navigate(R.id.action_profile_screen_fragment_to_terms_and_condition_fragment)
+    }
+
+    override fun navToFavourites() {
+        navDelegate.navToFavourites()
+    }
+}
